@@ -1,0 +1,29 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Add unit tests",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "Let's use GitHub Copilot to add unit tests to our project.\n\nPress `Next` to to get started 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web.Tests.Unit/BookTests.cs",
+      "line": 75,
+      "description": "Now, let's prompt Copilot to write a unit test. Write this comment: \n\n`// Add unit test for rating property` \n\non the next line. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web.Tests.Unit/BookTests.cs",
+      "line": 75,
+      "description": "Press `ENTER` then `TAB` to accept GitHub Copilot's suggestions. It may suggest something like this \n\n```csharp \n [Theory]\n        [InlineData(1)]\n        [InlineData(2)]\n        [InlineData(3)]\n\n        public void ExpectValidBookRatingsModelState(int ratings)\n        {\n            Book book = new Book(\"Crossing the Chasm\", \"Geoffrey A.Moore\", \"cover.jpg\", ratings);\n            var context = new ValidationContext(book, null, null);\n            var result = new List<ValidationResult>();\n\n            var valid = Validator.TryValidateObject(book, context, result, true);\n\n            Assert.True(valid);\n\n        }\n``` \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "title": "Let's run some tests",
+      "description": " Let's navigate to the \n\n`src/ReadingTime6.Web.Tests.Unit` \n\nfolder. \nThen run the command \n\n \n>> dotnet test\n"
+    },
+    {
+      "title": "Try it out!",
+      "description": "Let's run the tests to see if it works."
+    }
+  ],
+  "ref": "main"
+}
