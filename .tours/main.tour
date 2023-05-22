@@ -1,0 +1,69 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "main",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "Hi there! this is a guided tour to help you learn GitHub Copilot. We will add a new column for ratings in our .NET web app.\n\nPress `Next` to to get started 👇"
+    },
+    {
+      "title": "Create a new branch",
+      "description": "Create a new branch by running the command \n\n>> git checkout -b \"learning-copilot\"\n\nin your terminal. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Views/Book/Index.cshtml",
+      "line": 27,
+      "description": "Now, let's prompt Copilot to add a table heading for ratings. Write this comment: \n\n`// add a heading for ratings` \n\non the next line. Press enter to create a new line and accept Copilot's suggestion. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Views/Book/Index.cshtml",
+      "line": 27,
+      "description": "Press `ENTER` then `TAB` to accept GitHub Copilot's suggestions. It may suggest something like this \n\n```csharp \n<th> @Html.DisplayNameFor(model => model.Rating)\n``` \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Views/Book/Index.cshtml",
+      "line": 47,
+      "description": "Now, let's prompt Copilot to add a table heading for ratings. Write the following comment: \n\n`// add a column for ratings`\n\n on the next line. Press enter to create a new line and accept Copilot's suggestion. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Views/Book/Index.cshtml",
+      "line": 47,
+      "description": "Press `ENTER` then `TAB` to accept GitHub Copilot's suggestions. It may suggest something like this \n\n```csharp\n<td> @Html.DisplayFor(modelItem => item.Rating) </td> \n``` \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Models/Book.cs",
+      "line": 14,
+      "description": "To add the property for ratings, write this comment \n\n`// add a property for ratings` \n\non the next line. Press enter to create a new line and accept Copilot's suggestion. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Models/Book.cs",
+      "line": 14,
+      "description": "Press `ENTER` then `TAB` to accept GitHub Copilot's suggestions. It may suggest something like this \n\n```csharp  \npublic int Rating { get; set; }\n``` \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Models/Book.cs",
+      "line": 34,
+      "description": "To add the property for ratings, write this comment \n\n`// add a constructor that takes a title, author, cover, and ratings`\n \non the next line. Press enter to create a new line and accept Copilot's suggestion. \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Models/Book.cs",
+      "line": 34,
+      "description": "Press `ENTER` then `TAB` to accept GitHub Copilot's suggestions. It may suggest something like this \n\n```csharp  \npublic Book(string title, string author, string cover, int rating) \n{ \n    Title = title; \n    Author = author; \n    Cover = cover; \n    Rating = rating; \n    }\n``` \n\nPress `Next` to to get continue 👇"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Services/BookService.cs",
+      "line": 9,
+      "description": "Generate the ratings data for our app to pull. Write the following comment:\n\n `// Add ratings to each book`"
+    },
+    {
+      "file": "src/ReadingTime6.Web/Services/BookService.cs",
+      "line": 10,
+      "description": "Now for each book instance, add a comma, press space and accept GitHub Copilot’s suggestions. It should suggest a random integer for each rating and generate similar results \n\n ```csharp\n{\n            new Book(\"Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations\", \"Nicole Forsgren, PhD\", \"forsgren.jpg\", 5),\n            new Book(\"Scrum: The Art of Doing Twice the Work in Half the Time\", \"Jeff Sutherland\", \"scrum.jpg\", 4),\n            new Book(\"The Lean Startup: How Constant Innovation Creates Radically Successful Businesses\",\"Eric Ries\", \"lean.jpg\", 4),\n            new Book(\"Crossing the Chasm\", \"Geoffrey A. Moore\", \"chasm.jpg\", 3),\n            new Book(\"The Pragmatic Programmer: From Journeyman to Master\", \"David Thomas\", \"pragmatic.jpg\", 5),\n            new Book(\"Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability\",\" Steve Krug\", \"think.jpg\", 4),\n};\n\n ```"
+    },
+    {
+      "title": "Try it out!",
+      "description": "Let's run the code to see if it works."
+    }
+  ],
+  "ref": "main"
+}
